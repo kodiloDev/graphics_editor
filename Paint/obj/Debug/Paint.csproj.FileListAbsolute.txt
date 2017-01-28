@@ -1,0 +1,25 @@
+C:\Users\voytenko\Documents\Visual Studio 2015\Projects\Paint\Paint\bin\Debug\Paint.exe
+C:\Users\voytenko\Documents\Visual Studio 2015\Projects\Paint\Paint\bin\Debug\Paint.pdb
+C:\Users\voytenko\Documents\Visual Studio 2015\Projects\Paint\Paint\obj\Debug\Paint.csprojResolveAssemblyReference.cache
+C:\Users\voytenko\Documents\Visual Studio 2015\Projects\Paint\Paint\obj\Debug\Paint.Form1.resources
+C:\Users\voytenko\Documents\Visual Studio 2015\Projects\Paint\Paint\obj\Debug\Paint.Properties.Resources.resources
+C:\Users\voytenko\Documents\Visual Studio 2015\Projects\Paint\Paint\obj\Debug\Paint.csproj.GenerateResource.Cache
+C:\Users\voytenko\Documents\Visual Studio 2015\Projects\Paint\Paint\obj\Debug\Paint.exe
+C:\Users\voytenko\Documents\Visual Studio 2015\Projects\Paint\Paint\obj\Debug\Paint.pdb
+C:\SVNProjects\Paint\Paint\obj\Debug\Paint.exe
+C:\SVNProjects\Paint\Paint\obj\Debug\Paint.pdb
+C:\SVNProjects\Paint\Paint\bin\Debug\Paint.exe
+C:\SVNProjects\Paint\Paint\bin\Debug\Paint.pdb
+C:\SVNProjects\Paint\Paint\obj\Debug\Paint.csprojResolveAssemblyReference.cache
+C:\SVNProjects\Paint\Paint\obj\Debug\Paint.Form1.resources
+C:\SVNProjects\Paint\Paint\obj\Debug\Paint.Properties.Resources.resources
+C:\SVNProjects\Paint\Paint\obj\Debug\Paint.csproj.GenerateResource.Cache
+F:\paint2\Paint\Paint\obj\Debug\Paint.exe
+F:\paint2\Paint\Paint\obj\Debug\Paint.pdb
+F:\paint2\Paint\Paint\bin\Debug\Paint.exe
+F:\paint2\Paint\Paint\bin\Debug\Paint.pdb
+F:\paint2\Paint\Paint\obj\Debug\Paint.csprojResolveAssemblyReference.cache
+F:\paint2\Paint\Paint\obj\Debug\Paint.Form1.resources
+F:\paint2\Paint\Paint\obj\Debug\Paint.Properties.Resources.resources
+F:\paint2\Paint\Paint\obj\Debug\Paint.csproj.GenerateResource.Cache
+F:\paint2\Paint\Paint\bin\Debug\Paint.exe.config
