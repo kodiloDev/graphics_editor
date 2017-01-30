@@ -49,14 +49,14 @@ namespace Paint
                 else if (cBox_FiguraType.SelectedIndex == 2)
                 {
                     //прямоугольник
-                    RectangleClass rc = new RectangleClass(thickness, "Прямоугольник", color, mouseXStart, mouseYStart);
+                    RectangleClass rc = new RectangleClass(thickness, "Прямоугольник", color, mouseXStart, mouseYStart, chBox_fill.Checked);
                     rc.Drawing(ref graphics,ref graphicsVisual,  ref e);
 
                 }
                 else if (cBox_FiguraType.SelectedIndex == 3)
                 {
                     //круг
-                    Circle circle = new Circle(thickness, "Круг", color, mouseXStart, mouseYStart);
+                    Circle circle = new Circle(thickness, "Круг", color, mouseXStart, mouseYStart, chBox_fill.Checked);
                     circle.Drawing(ref graphics, ref graphicsVisual, ref e);
                 }
             }
@@ -181,6 +181,18 @@ namespace Paint
             }
 
             return (Image)bitmap;
+        }
+
+        private void cBox_FiguraType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cBox_FiguraType.SelectedIndex == 2 || cBox_FiguraType.SelectedIndex == 3)
+            {
+                chBox_fill.Visible = true;
+            }
+            else
+            {
+                chBox_fill.Visible = false;
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)

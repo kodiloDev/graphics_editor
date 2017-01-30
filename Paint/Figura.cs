@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -63,28 +63,43 @@ namespace Paint
     class RectangleClass : Figura
     {
         int x, y;
-        public RectangleClass(int thickness, string name, SolidBrush color, int x, int y) : base(thickness, name, color)
+        bool fill = false;
+        public RectangleClass(int thickness, string name, SolidBrush color, int x, int y, bool fill) : base(thickness, name, color)
         {
             this.x = x;
             this.y = y;
+            this.fill = fill;
         }
 
         public override void Drawing(ref Graphics graphics, ref Graphics graphicsVisual, ref MouseEventArgs e)
         {
             Pen pen = new Pen(color, thickness);
             Rectangle rec = new Rectangle(Math.Min(e.X, x), Math.Min(e.Y, y), Math.Abs(e.X - x), Math.Abs(e.Y - y));
-            graphics.DrawRectangle(pen, rec);
-            graphicsVisual.DrawRectangle(pen, rec);
+            if (fill)
+            {
+                graphics.FillRectangle(color, rec);
+                graphicsVisual.FillRectangle(color, rec);
+            }
+            else
+            {
+                graphics.DrawRectangle(pen, rec);
+                graphicsVisual.DrawRectangle(pen, rec);
+            }
+          
         }
+
+
     }
 
     class Circle : Figura
     {
         int x, y;
-        public Circle(int thickness, string name, SolidBrush color, int x, int y) : base(thickness, name, color)
+        bool fill;
+        public Circle(int thickness, string name, SolidBrush color, int x, int y, bool fill) : base(thickness, name, color)
         {
             this.x = x;
             this.y = y;
+            this.fill = fill;
         }
 
         public override void Drawing(ref Graphics graphics, ref Graphics graphicsVisual, ref MouseEventArgs e)
@@ -94,8 +109,18 @@ namespace Paint
             Rectangle rec = new Rectangle(Math.Min(e.X, x), Math.Min(e.Y, y), size, size);
             graphics.SmoothingMode = SmoothingMode.AntiAlias; //сглаживание линии
             graphicsVisual.SmoothingMode = SmoothingMode.AntiAlias;
-            graphics.DrawEllipse(pen, rec);
-            graphicsVisual.DrawEllipse(pen, rec);
+
+            if (fill)
+            {
+                graphicsVisual.FillEllipse(color, rec);
+                graphics.FillEllipse(color, rec);
+            }
+            else
+            {
+                graphics.DrawEllipse(pen, rec);
+                graphicsVisual.DrawEllipse(pen, rec);
+            }
+         
         }
     }
 

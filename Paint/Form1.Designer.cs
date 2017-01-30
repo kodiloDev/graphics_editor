@@ -41,6 +41,7 @@
             this.btn_save = new System.Windows.Forms.Button();
             this.colorDialogForFigura = new System.Windows.Forms.ColorDialog();
             this.colorDialogBackground = new System.Windows.Forms.ColorDialog();
+            this.chBox_fill = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_figurColor)).BeginInit();
@@ -78,6 +79,7 @@
             this.cBox_FiguraType.Size = new System.Drawing.Size(207, 21);
             this.cBox_FiguraType.TabIndex = 0;
             this.cBox_FiguraType.Text = "Произвольное рисование";
+            this.cBox_FiguraType.SelectedIndexChanged += new System.EventHandler(this.cBox_FiguraType_SelectedIndexChanged);
             this.cBox_FiguraType.DropDownClosed += new System.EventHandler(this.cBox_FiguraType_DropDownClosed);
             // 
             // tableLayoutPanel1
@@ -99,6 +101,7 @@
             // panel1
             // 
             this.panel1.AutoSize = true;
+            this.panel1.Controls.Add(this.chBox_fill);
             this.panel1.Controls.Add(this.pb_form);
             this.panel1.Controls.Add(this.btn_invert);
             this.panel1.Controls.Add(this.pb_figurColor);
@@ -133,7 +136,7 @@
             // pb_figurColor
             // 
             this.pb_figurColor.BackColor = System.Drawing.Color.Black;
-            this.pb_figurColor.Location = new System.Drawing.Point(12, 65);
+            this.pb_figurColor.Location = new System.Drawing.Point(12, 109);
             this.pb_figurColor.Name = "pb_figurColor";
             this.pb_figurColor.Size = new System.Drawing.Size(58, 23);
             this.pb_figurColor.TabIndex = 6;
@@ -141,7 +144,7 @@
             // 
             // btn_figurColor
             // 
-            this.btn_figurColor.Location = new System.Drawing.Point(85, 65);
+            this.btn_figurColor.Location = new System.Drawing.Point(85, 109);
             this.btn_figurColor.Name = "btn_figurColor";
             this.btn_figurColor.Size = new System.Drawing.Size(75, 23);
             this.btn_figurColor.TabIndex = 5;
@@ -152,7 +155,7 @@
             // pb_backColor
             // 
             this.pb_backColor.BackColor = System.Drawing.Color.White;
-            this.pb_backColor.Location = new System.Drawing.Point(12, 36);
+            this.pb_backColor.Location = new System.Drawing.Point(12, 80);
             this.pb_backColor.Name = "pb_backColor";
             this.pb_backColor.Size = new System.Drawing.Size(58, 23);
             this.pb_backColor.TabIndex = 4;
@@ -160,7 +163,7 @@
             // 
             // btn_backColor
             // 
-            this.btn_backColor.Location = new System.Drawing.Point(85, 36);
+            this.btn_backColor.Location = new System.Drawing.Point(85, 80);
             this.btn_backColor.Name = "btn_backColor";
             this.btn_backColor.Size = new System.Drawing.Size(75, 23);
             this.btn_backColor.TabIndex = 3;
@@ -178,6 +181,17 @@
             this.btn_save.UseVisualStyleBackColor = true;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
+            // chBox_fill
+            // 
+            this.chBox_fill.AutoSize = true;
+            this.chBox_fill.Location = new System.Drawing.Point(12, 36);
+            this.chBox_fill.Name = "chBox_fill";
+            this.chBox_fill.Size = new System.Drawing.Size(70, 17);
+            this.chBox_fill.TabIndex = 9;
+            this.chBox_fill.Text = "Залитый";
+            this.chBox_fill.UseVisualStyleBackColor = true;
+            this.chBox_fill.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,6 +206,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_figurColor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_backColor)).EndInit();
             this.ResumeLayout(false);
@@ -214,6 +229,7 @@
         private System.Windows.Forms.ColorDialog colorDialogBackground;
         private System.Windows.Forms.Button btn_invert;
         private System.Windows.Forms.ProgressBar pb_form;
+        private System.Windows.Forms.CheckBox chBox_fill;
     }
 }
 
