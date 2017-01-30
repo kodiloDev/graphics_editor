@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -26,8 +26,8 @@ namespace Paint
         {
             graphics.FillEllipse(color, e.X, e.Y, thickness, thickness);
             graphicsVisual.FillEllipse(color, e.X, e.Y, thickness, thickness);
-          //  graphics.Dispose();
-          //  graphicsVisual.Dispose();
+            graphics.SmoothingMode = SmoothingMode.AntiAlias; //сглаживание линии
+            graphicsVisual.SmoothingMode = SmoothingMode.AntiAlias;
         }
 
       
@@ -55,10 +55,9 @@ namespace Paint
         {
             Pen pen = new Pen(color, thickness);
             graphics.SmoothingMode = SmoothingMode.AntiAlias; //сглаживание линии
+            graphicsVisual.SmoothingMode = SmoothingMode.AntiAlias;
             graphics.DrawLine(pen, x, y, e.X, e.Y);
             graphicsVisual.DrawLine(pen, x, y, e.X, e.Y);
-           // graphics.Dispose();
-           // graphicsVisual.Dispose();
         }
     }
     class RectangleClass : Figura
@@ -76,9 +75,6 @@ namespace Paint
             Rectangle rec = new Rectangle(Math.Min(e.X, x), Math.Min(e.Y, y), Math.Abs(e.X - x), Math.Abs(e.Y - y));
             graphics.DrawRectangle(pen, rec);
             graphicsVisual.DrawRectangle(pen, rec);
-            //graphics.Dispose();
-           // graphicsVisual.Dispose();
-
         }
     }
 
@@ -96,15 +92,10 @@ namespace Paint
             Pen pen = new Pen(color, thickness);
             int size = (e.X > e.Y) ? Math.Abs(e.X - x) : Math.Abs(e.Y - y);
             Rectangle rec = new Rectangle(Math.Min(e.X, x), Math.Min(e.Y, y), size, size);
-
-          
-
-
+            graphics.SmoothingMode = SmoothingMode.AntiAlias; //сглаживание линии
+            graphicsVisual.SmoothingMode = SmoothingMode.AntiAlias;
             graphics.DrawEllipse(pen, rec);
-            //graphics.Dispose();
-
             graphicsVisual.DrawEllipse(pen, rec);
-            //graphicsVisual.Dispose();
         }
     }
 
